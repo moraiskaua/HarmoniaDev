@@ -1,12 +1,15 @@
 import ThemeButton from '@/app/components/buttons/theme/ThemeButton';
+import Layout from '../layout';
 
 interface IntroductionProps {}
 
 const Introduction = ({}: IntroductionProps) => {
   return (
-    <section className="h-screen w-full flex justify-center items-center bg-light dark:bg-dark dark:text-white">
-      <ThemeButton />
-    </section>
+    <Layout>
+      <div className="h-full w-full flex justify-center items-center">
+        <ThemeButton />
+      </div>
+    </Layout>
   );
 };
 
