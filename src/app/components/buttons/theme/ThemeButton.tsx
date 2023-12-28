@@ -1,9 +1,11 @@
 import useTheme from '@/hooks/useTheme';
 import ThemeIcon from './ThemeIcon';
 
-interface ThemeButtonProps {}
+interface ThemeButtonProps {
+  background?: string;
+}
 
-const ThemeButton = ({}: ThemeButtonProps) => {
+const ThemeButton = ({ background }: ThemeButtonProps) => {
   const { toggleTheme } = useTheme();
 
   const handleClick = () => {
@@ -12,7 +14,7 @@ const ThemeButton = ({}: ThemeButtonProps) => {
 
   return (
     <button onClick={handleClick}>
-      <ThemeIcon />
+      <ThemeIcon background={background || '#252E27'} />
     </button>
   );
 };

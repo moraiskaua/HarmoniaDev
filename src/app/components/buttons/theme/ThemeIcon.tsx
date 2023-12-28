@@ -1,12 +1,12 @@
 import useTheme from '@/hooks/useTheme';
 
-const ThemeIcon = () => {
+const ThemeIcon = ({ background }: { background: string }) => {
   const { theme } = useTheme();
 
   return (
     <svg width="38" height="38" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="6" fill="currentColor" />
-      {!!theme && <circle cx="17" cy="9" r="6" fill="#252E27" />}
+      {!!theme && <circle cx="17" cy="9" r="6" fill={background} />}
       <g className={`${!!theme ? 'hidden' : ''}`} stroke="currentColor">
         <line x1="12" y1="1" x2="12" y2="3" />
         <line x1="12" y1="21" x2="12" y2="23" />
