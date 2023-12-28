@@ -4,7 +4,7 @@ const ThemeIcon = () => {
   const { theme } = useTheme();
 
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24">
+    <svg width="38" height="38" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="6" fill="currentColor" />
       {!!theme && <circle cx="17" cy="9" r="6" fill="#252E27" />}
       <g className={`${!!theme ? 'hidden' : ''}`} stroke="currentColor">
