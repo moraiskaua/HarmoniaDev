@@ -1,3 +1,5 @@
+'use client';
+
 import useTheme from '@/hooks/useTheme';
 import ThemeIcon from './ThemeIcon';
 
@@ -14,7 +16,7 @@ const ThemeButton = ({ background }: ThemeButtonProps) => {
 
   return (
     <button onClick={handleClick}>
-      <ThemeIcon background={background || '#252E27'} />
+      <ThemeIcon background={background ?? '#252E27'} />
     </button>
   );
 };
