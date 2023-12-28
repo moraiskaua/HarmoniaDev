@@ -1,12 +1,14 @@
 'use client';
+
 import useTheme from '@/hooks/useTheme';
-import Teste from '../teste';
+import Introduction from './components/Introduction';
 
 const Home = () => {
   const { theme } = useTheme();
+
   return (
     <main className={`${theme} min-h-screen w-full`}>
-      <Teste />
+      <Introduction />
     </main>
   );
 };
