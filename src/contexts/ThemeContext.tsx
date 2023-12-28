@@ -1,4 +1,5 @@
 'use client';
+
 import { ReactNode, createContext, useEffect, useState } from 'react';
 
 interface ThemeContextProps {
@@ -24,7 +25,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    setTheme((savedTheme as ThemeType) || '');
+    setTheme(prevTheme => (prevTheme = savedTheme as ThemeType));
   }, []);
 
   return (
