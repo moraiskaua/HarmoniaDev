@@ -1,13 +1,11 @@
-import useTheme from '@/hooks/useTheme';
+import ThemeButton from '@/app/components/buttons/ThemeButton';
 
 interface IntroductionProps {}
 
 const Introduction = ({}: IntroductionProps) => {
-  const { toggleTheme } = useTheme();
-
   return (
     <div className="h-screen w-full flex justify-center items-center bg-light dark:bg-dark dark:text-white">
-      <button onClick={toggleTheme}>Alterar tema</button>
+      <ThemeButton />
     </div>
   );
 };
